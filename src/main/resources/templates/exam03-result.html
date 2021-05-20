@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="ja" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1>合計金額</h1>
+	<ul>
+		<li>税抜き価格</li>
+		<div th:text="${#numbers.formatInteger(application.nonTaxPrice,2,'COMMA')}"></div> 円
+		<li>税込み価格</li>
+		<div th:text="${#numbers.formatInteger(application.taxIncludePrice,2,'COMMA')}"></div> 円
+	</ul>
+</body>
+</html>
